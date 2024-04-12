@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Ahorcado</title>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+
+<body style="background-image: url(./img/fondopricipal1.png);">
+    <div class="padre">
+        <h1 class="titulo">AHORCADOS</h1>
+        <div class="juego">
+            <button class="iniciar" id="playButton"><img src="./img/play.png" alt=""></button>
+            <div id="categorias" style="display: none;">
+                <div class="categoria" id="animales">
+                    <button class="categoria-btn" onclick="iniciarJuego('animales')">
+                        <img src="./img/animales.jpg" alt="Animales">
+                    </button>
+                </div>
+                <div class="categoria" id="comida">
+                    <button class="categoria-btn" onclick="iniciarJuego('comida')">
+                        <img src="./img/comida.jpg" alt="Comida">
+                    </button>
+                </div>
+                <div class="categoria" id="frutas">
+                    <button class="categoria-btn" onclick="iniciarJuego('frutas')">
+                        <img src="./img/frutas.jpg" alt="Frutas">
+                    </button>
+                </div>
+            </div>
+
+            <div id="niveles" style="display: none;">
+
+                <div id="nivelesfmd">
+                    <button class="nivel-btn" onclick="niveless('facil')">
+                        <h1>Facil</h1>
+                    </button>
+                </div>
+                <div id="nivelesfmd">
+                    <button class="nivel-btn" onclick="niveless('medio')">
+                        <h1>Medio</h1>
+                    </button>
+                </div>
+                <div id="nivelesfmd">
+                    <button class="nivel-btn" onclick="niveless('dificil')">
+                        <h1>Dificil</h1>
+                    </button>
+                </div>
+            </div>
+
+            <div id="play">
+
+                <div id="imagenes">
+                    <div id="imagen-0" style="display: none;" id="img1"><img src="./img/ahorcado1.png" alt="">
+                    </div>
+                    <div id="imagen-1" style="display: none;" id="img1"><img src="./img/ahorcado2.png" alt="">
+                    </div>
+                    <div id="imagen-2" style="display: none;" id="img1"><img src="./img/ahorcado3.png" alt="">
+                    </div>
+                    <div id="imagen-3" style="display: none;" id="img1"><img src="./img/ahorcado4.png" alt="">
+                    </div>
+                    <div id="imagen-4" style="display: none;" id="img1"><img src="./img/ahorcado5.png" alt="">
+                    </div>
+                    <div id="imagen-5" style="display: none;" id="img1"><img src="./img/ahorcado6.png" alt="">
+                    </div>
+                    <div id="imagen-6" style="display: none;" id="img1"><img src="./img/ahorcado7.png" alt="">
+                    </div>
+                    <div id="imagen-7" style="display: none;" id="img1"><img src="./img/ahorcado8.png" alt="">
+                    </div>
+                    <div id="imagen-8" style="display: none;" id="img1"><img src="./img/ahorcado9.png" alt="">
+                    </div>
+                </div>
+                <div class="tecladoconintentos">
+                    <div id="intentos"></div>
+                    <div id="juego" style="display: none;">
+
+                        <div id="intentos-botones">
+
+                            <div id="palabra"></div>
+                            <div id="botones">
+                                <button class="button cuadro-letra" onclick="comprobarLetra('a')">a</button>
+                                <button class="button cuadro-letra" onclick="comprobarLetra('b')">b</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="winner" style=" display: none;">
+            <img src="./img/winner2.gif " alt="">
+            <h1>Winner</h1>
+        </div>
+
+        <div id="perdiste" style="display: none;">
+            <img src="./img/perdiste.gif" alt="Perdiste">
+            <p id="mensajePerdiste"></p>
+        </div>
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
